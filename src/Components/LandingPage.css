@@ -1,0 +1,138 @@
+/* Prevent scrolling */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Disables scrolling */
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  /* Fixed full-screen background */
+  .landing-container {
+    position: fixed; /* Fixes everything in place */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("https://img.freepik.com/free-photo/copy-space-blank-empty-office-desk-concept_53876-123755.jpg?ga=GA1.1.168387999.1730787312&semt=ais_hybrid")
+      no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* Keeps it fixed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Dark overlay for better readability */
+  .overlay {
+    position: fixed; /* Keeps overlay fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Fixed Navigation Bar */
+  .nav-bar {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  /* Navigation Buttons */
+  .nav-button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Login Button */
+  .login {
+    background: #007bff;
+    border: 2px solid white;
+    color: white;
+  }
+  
+  .login:hover {
+    background: #007bff;
+    color: white;
+  }
+  
+  /* Signup Button */
+  .signup {
+    background: #007bff;
+    color: white;
+    border: 2px solid transparent;
+  }
+  
+  .signup:hover {
+    background: #0056b3;
+  }
+  
+  /* Fixed Main Content */
+  .content {
+    position: fixed;
+    text-align: center;
+    color: white;
+    z-index: 1;
+  }
+  
+  /* Title */
+  .title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .highlight {
+    color: #00bfff;
+    animation: pulse 1.5s infinite;
+  }
+  
+  /* Subtitle */
+  .subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+  }
+  
+  /* CTA Button */
+  .cta-button {
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 10px rgba(0, 123, 255, 0.5);
+  }
+  
+  .cta-button:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+  }
+  
+  /* Animation for the highlighted text */
+  @keyframes pulse {
+    0% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.7;
+    }
+  }
+
+  

@@ -1,0 +1,80 @@
+/* Centering the course grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  animation: fadeIn 1s ease-in-out; /* ✅ Fade-in animation */
+}
+
+/* Individual course card */
+.border {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Effect */
+.border:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Subtle Glow Effect on Hover */
+.border:hover::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: rgba(42, 82, 152, 0.1);
+  border-radius: 10px;
+  z-index: -1;
+  animation: glow 1.5s infinite alternate ease-in-out;
+}
+
+/* Shadow Pulsing */
+@keyframes glow {
+  from {
+      box-shadow: 0 0 10px rgba(42, 82, 152, 0.2);
+  }
+  to {
+      box-shadow: 0 0 25px rgba(42, 82, 152, 0.4);
+  }
+}
+
+/* Fade-in animation when loading */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(15px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Shimmer effect for loading */
+.loading {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #9ca3af;
+  margin-top: 2rem;
+  animation: shimmer 2s infinite linear;
+}
+
+@keyframes shimmer {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}

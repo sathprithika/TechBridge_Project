@@ -1,0 +1,125 @@
+/* Full-screen abstract wave background */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #1e3c72, #2a5298); 
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Adding an animated wave effect */
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://www.transparenttextures.com/patterns/cubes.png"), 
+                linear-gradient(120deg, rgba(30,60,114,0.7), rgba(42,82,152,0.7));
+    z-index: -1;
+    opacity: 0.6;
+    animation: waveMove 6s infinite alternate;
+  }
+  
+  /* Subtle wave animation */
+  @keyframes waveMove {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-20px);
+    }
+  }
+  
+  /* Centering the form */
+  .search-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Form box */
+  .search-form {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Heading */
+  .search-form h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Labels */
+  .search-form label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+  
+  /* Dropdown styling */
+  .search-form select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-bottom: 15px;
+    outline: none;
+    transition: border-color 0.3s;
+    background: white;
+  }
+  
+  .search-form select:focus {
+    border-color: #2a5298;
+    box-shadow: 0 0 6px rgba(42, 82, 152, 0.4);
+  }
+  
+  /* Submit button */
+  .search-form button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #2a5298, #1e3c72);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .search-form button:hover {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    transform: scale(1.05);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 480px) {
+    .search-form {
+      padding: 20px;
+    }
+  
+    .search-form h2 {
+      font-size: 22px;
+    }
+  }
+  
